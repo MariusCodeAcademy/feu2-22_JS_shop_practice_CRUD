@@ -89,6 +89,7 @@ main {
 .price {
   font-size: 1.6rem;
   color: #000;
+  justify-self: flex-end;
 }
 .price.onSale {
   color: #ff6f61;
