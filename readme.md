@@ -46,3 +46,14 @@ https://dummyjson.com/docs/products
    thumbnail: 'https://i.dummyjson.com/data/products/1/thumbnail.jpg',
 }
 ```
+
+### update-product.html
+
+1. gauti prekes id
+2. parisisiusti preke
+3. htmle forma panasi i add-product.html
+4. puslapiui pasileidus, mes kreipiames i serveri ir parsisiunciam post info
+5. supildom formos laukams values is gauto objekto
+6. vartotojas pakecia reikalinga info
+7. surenkam formos ivesties lauku info
+8. siunciam put request.
