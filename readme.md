@@ -25,7 +25,9 @@ https://dummyjson.com/docs/products
 
 1. gauti prekes id
 2. parisisiusti preke
-3. nupieti preke htmle
+3. nupieti preke htmle (sugeneruoti makeOneSingleItem single produkta)
+4. paspaudus mygtukus iskviesti funkcijas kurios konsole logina
+   1. iskonsolinti elemento id kuriame buvo paspaustas mygtukas
 
 ### add-product.html
 
@@ -33,3 +35,14 @@ https://dummyjson.com/docs/products
 2. surinkti formos laukus ir issiusti i api
 3. jei pavyko perradresuoti i index.html
 4. jei ne pranesti apie klaida
+
+```javascript
+   {
+   title: 'iPhone 9',
+   description: 'An apple mobile which is nothing like apple',
+   price: 549,
+   discountPercentage: 12.96,
+   category: 'smartphones',
+   thumbnail: 'https://i.dummyjson.com/data/products/1/thumbnail.jpg',
+}
+```

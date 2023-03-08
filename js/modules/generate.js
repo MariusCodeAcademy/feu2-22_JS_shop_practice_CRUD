@@ -40,9 +40,14 @@ export function makeOneItem(shopItemObj) {
   return liEl;
 }
 
-export function makeOneSingleItem(shopItemObj) {}
+export function makeOneSingleItem(shopItemObj) {
+  console.log('generating item');
+  // sugeneruoti makeOneSingleItem single produkta
+}
 
 export function render(arr) {
-  shopItemsList.innerHTML = '';
-  arr.map(makeOneItem).forEach((liEl) => shopItemsList.append(liEl));
+  if (shopItemsList) {
+    shopItemsList.innerHTML = '';
+    arr.map(makeOneItem).forEach((liEl) => shopItemsList.append(liEl));
+  }
 }

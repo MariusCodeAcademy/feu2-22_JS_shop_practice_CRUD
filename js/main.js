@@ -1,7 +1,5 @@
-import { getData } from './modules/fetch.js';
+import { getData, prodUrl } from './modules/fetch.js';
 import { render } from './modules/generate.js';
-
-const prodUrl = 'https://dummyjson.com/products';
 
 // taikomes
 export const shopItemsList = document.getElementById('shopItemsList');
