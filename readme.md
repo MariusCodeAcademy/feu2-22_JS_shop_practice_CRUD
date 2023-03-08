@@ -21,6 +21,12 @@ https://dummyjson.com/docs/products
 1. gauti visas prekes is api
 2. nupiesti, sugeneruoti elementus htmle
 
+### single-product.html
+
+1. gauti prekes id
+2. parisisiusti preke
+3. nupieti preke htmle
+
 ### add-product.html
 
 1. sukuri htmle forma naujai prekei pridet

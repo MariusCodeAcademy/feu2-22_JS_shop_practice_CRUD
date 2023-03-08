@@ -52,6 +52,12 @@ main {
 
 .shopItemTop {
   position: relative;
+  height: 270px;
+}
+.shopItemTop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .shopItemTop span {
   background-color: #1e2832;
