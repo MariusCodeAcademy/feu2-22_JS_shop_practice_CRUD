@@ -32,7 +32,7 @@ https://dummyjson.com/docs/products
 ### add-product.html
 
 1. sukuri htmle forma naujai prekei pridet
-2. surinkti formos laukus ir issiusti i api
+2. surinkti formos laukus ir issiusti i api (dokumentacija https://dummyjson.com/docs/products#add)
 3. jei pavyko perradresuoti i index.html
 4. jei ne pranesti apie klaida
 
