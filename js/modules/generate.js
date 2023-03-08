@@ -24,8 +24,10 @@ export function makeOneItem(shopItemObj) {
   // vidu sukurti su innerHtml
   liEl.innerHTML = `
     <div class="shopItemTop">
-      <img src="${shopItemObj.thumbnail}" alt="${shopItemObj.title}">
-      <span>sale</span>
+      <a href="/single-product.html">
+        <img src="${shopItemObj.thumbnail}" alt="${shopItemObj.title}">
+        <span>sale</span>
+      </a>
     </div>
     <div class="shopItemInfo">
       <h3 class="title">${shopItemObj.title}</h3>
