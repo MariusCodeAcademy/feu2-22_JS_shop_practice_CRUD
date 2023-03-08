@@ -1,8 +1,11 @@
+import { postData } from './modules/fetch.js';
+
 const formEl = document.forms[0];
+const addUrl = 'https://dummyjson.com/products/add';
 
 formEl.addEventListener('submit', formSubmitHandler);
 
-function formSubmitHandler(e) {
+async function formSubmitHandler(e) {
   e.preventDefault();
   console.log('formSubmitHandler ivyko');
 
@@ -15,6 +18,19 @@ function formSubmitHandler(e) {
     thumbnail: formEl.elements.thumbnail.value.trim(),
   };
   console.log('newItemObj ===', newItemObj);
+
+  // validation
+
+  // siusti duomenis
+  const [sekme, klaida] = await postData(addUrl, newItemObj);
+  if (klaida) {
+    // klaida
+    console.log('pranesti apie klaida');
+    return;
+  }
+  if (sekme) {
+    console.log('redirect i index.html');
+  }
 }
 
 function app() {}

@@ -7,6 +7,12 @@ export function getData(url) {
     .catch(console.warn);
 }
 
+/**
+ *
+ * @param {string} url
+ * @param {Object} whatToPost
+ * @returns [successResponse, Error]
+ */
 export function postData(url, whatToPost) {
   return fetch(url, {
     method: 'POST',
@@ -14,6 +20,9 @@ export function postData(url, whatToPost) {
     body: JSON.stringify(whatToPost),
   })
     .then((resp) => resp.json())
-    .then((postResult) => postResult)
-    .catch(console.warn);
+    .then((postResult) => [postResult, null])
+    .catch((err) => {
+      console.warn(err);
+      return [null, err.message];
+    });
 }
