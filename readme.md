@@ -4,7 +4,7 @@
 
 https://www.figma.com/community/file/1104697168164533075
 
-### shop api
+### shop api docs
 
 https://dummyjson.com/docs/products
 
