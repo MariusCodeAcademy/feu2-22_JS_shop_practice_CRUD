@@ -1,4 +1,4 @@
-import { shopItemsList } from '../main.js';
+import { shopItemsList } from './elements.js';
 /*
 <li class="shopItem">
   <div class="shopItemTop">
@@ -42,7 +42,27 @@ export function makeOneItem(shopItemObj) {
 
 export function makeOneSingleItem(shopItemObj) {
   console.log('generating item');
-  // sugeneruoti makeOneSingleItem single produkta
+  const divEl = document.createElement('div');
+  divEl.className = 'shopItem singleProduct';
+  divEl.innerHTML = `
+  <div class="shopItemTop">
+    <a href="/single-product.html">
+      <img src="/img/prod-1.png" alt="item image">
+      <span>sale</span>
+    </a>
+  </div>
+  <div class="shopItemInfo">
+    <h3 class="title ">Yellow Reserved Hoodie</h3>
+    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto itaque alias ea earum
+      voluptate quidem, impedit ex eveniet? Omnis quibusdam enim non cupiditate quam quaerat exercitationem, nisi
+    </p>
+    <p class="category">Dress</p>
+    <p class="price onSale"><span class="salePrice">$364.00</span>$155.00</p>
+    <button>Buy now</button>
+    <button>Add to cart</button>
+  </div>
+  `;
+  return divEl;
 }
 
 export function render(arr) {

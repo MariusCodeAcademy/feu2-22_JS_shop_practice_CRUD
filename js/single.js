@@ -1,6 +1,7 @@
 import { getParam } from './modules/helper.js';
 import { prodUrl, getData } from './modules/fetch.js';
 import { makeOneSingleItem } from './modules/generate.js';
+import { singleItemDiv } from './modules/elements.js';
 
 async function app() {
   console.log('single app started');
@@ -24,5 +25,6 @@ async function app() {
   // sugeneruoti ji htmle
   const itemHtmlEl = makeOneSingleItem(currentItemObj);
   // patalpinti itemHtmlEl i dom
+  singleItemDiv.append(itemHtmlEl);
 }
 app();

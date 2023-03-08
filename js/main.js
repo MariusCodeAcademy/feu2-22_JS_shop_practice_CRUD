@@ -1,9 +1,6 @@
 import { getData, prodUrl } from './modules/fetch.js';
 import { render } from './modules/generate.js';
 
-// taikomes
-export const shopItemsList = document.getElementById('shopItemsList');
-
 async function app() {
   let mainShopItemsArr = [];
   console.log('app started');
