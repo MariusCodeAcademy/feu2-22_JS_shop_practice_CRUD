@@ -40,6 +40,8 @@ export function makeOneItem(shopItemObj) {
   return liEl;
 }
 
+export function makeOneSingleItem(shopItemObj) {}
+
 export function render(arr) {
   shopItemsList.innerHTML = '';
   arr.map(makeOneItem).forEach((liEl) => shopItemsList.append(liEl));

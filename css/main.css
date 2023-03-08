@@ -100,3 +100,14 @@ main {
 .price.onSale {
   color: #ff6f61;
 }
+
+/* single product page */
+
+.singleProduct {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.singleProduct .text {
+  grid-column: span 2;
+}
