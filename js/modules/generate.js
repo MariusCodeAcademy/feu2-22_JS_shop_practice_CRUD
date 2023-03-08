@@ -61,10 +61,12 @@ export function makeOneSingleItem(shopItemObj) {
     <p class="price onSale"><span class="salePrice">$${shopItemObj.price.toFixed(
       2
     )}</span>$${priceAfterDiscount.toFixed(2)}</p>
-    <button>Buy now</button>
-    <button>Add to cart</button>
+    <button id="buyNow">Buy now</button>
+    <button id='addToCart'>Add to cart</button>
   </div>
   `;
+  const buyNowBtn = divEl.querySelector('#buyNow');
+  buyNowBtn.addEventListener('click', makeBuyNow);
   return divEl;
 }
 
@@ -73,4 +75,8 @@ export function render(arr) {
     shopItemsList.innerHTML = '';
     arr.map(makeOneItem).forEach((liEl) => shopItemsList.append(liEl));
   }
+}
+
+function makeBuyNow() {
+  console.log('makeBuyNow');
 }
