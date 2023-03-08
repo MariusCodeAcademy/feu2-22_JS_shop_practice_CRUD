@@ -6,3 +6,14 @@ export function getData(url) {
     .then((data) => data)
     .catch(console.warn);
 }
+
+export function postData(url, whatToPost) {
+  return fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(whatToPost),
+  })
+    .then((resp) => resp.json())
+    .then((postResult) => postResult)
+    .catch(console.warn);
+}
