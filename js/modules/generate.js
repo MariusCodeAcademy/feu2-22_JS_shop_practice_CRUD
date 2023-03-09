@@ -1,4 +1,5 @@
 import { shopItemsList } from './elements.js';
+import { deleteData, prodUrl } from './fetch.js';
 /*
 <li class="shopItem">
   <div class="shopItemTop">
@@ -86,6 +87,10 @@ function makeBuyNow() {
   console.log('makeBuyNow');
 }
 
-function deleteItem(id) {
+async function deleteItem(id) {
   console.log('deleteItem', id);
+  const delUrl = `${prodUrl}/${id}`;
+  const [sekme, klaida] = await deleteData(delUrl);
+  console.log('sekme ===', sekme);
+  console.log('klaida ===', klaida);
 }

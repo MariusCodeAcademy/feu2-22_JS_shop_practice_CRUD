@@ -42,3 +42,17 @@ export function updateData(url, updateObj) {
 }
 
 // deleteData funkcija
+export async function deleteData(url) {
+  try {
+    const resp = await fetch(url, {
+      method: 'DELETE',
+    });
+    const deleteResult = await resp.json();
+    // sekme
+    return [deleteResult, null];
+  } catch (error) {
+    // jei yra klaida
+    console.warn('klaida deleteData fn', error);
+    return [null, error.message];
+  }
+}
