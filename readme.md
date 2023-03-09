@@ -1,5 +1,7 @@
 # shop practice
 
+## dir name 22_JS_shop_practice_CRUD
+
 ### shop example link
 
 https://www.figma.com/community/file/1104697168164533075
