@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | update product</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script type="module" src="js/update.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <a href="/" class="logo">Best<strong>Shop</strong></a>
+      <nav class="mainNav">
+        <a href="index.html" class="navLink">Home</a>
+        <a href="add-product.html" class="navLink">Add product</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="/single-product.html?itemId=1">Go back</a>
+
+    <h1>Update item</h1>
+
+    <form>
+      <input type="text" id="title" placeholder="title">
+      <input type="number" id="price" placeholder="price">
+      <input type="number" id="discountPercentage" placeholder="discount" step="0.01">
+      <select id="category">
+        <option value="">Pasirinkite</option>
+      </select>
+      <input type="text" id="thumbnail" placeholder="Image url">
+      <textarea id="description" cols="30" rows="10"></textarea>
+      <button type="submit">Update item</button>
+    </form>
+
+  </main>
+
+</body>
+
+</html>

@@ -63,7 +63,7 @@ export function makeOneSingleItem(shopItemObj) {
     )}</span>$${priceAfterDiscount.toFixed(2)}</p>
     <button id="buyNow">Buy now</button>
     <button id='addToCart'>Add to cart</button>
-    <a href="/update-product.html">Update Item</a>
+    <a href="/update-product.html?updateId=${shopItemObj.id}">Update Item</a>
   </div>
   `;
   const buyNowBtn = divEl.querySelector('#buyNow');
