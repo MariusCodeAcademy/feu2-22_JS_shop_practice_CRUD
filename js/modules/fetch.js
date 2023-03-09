@@ -26,3 +26,17 @@ export function postData(url, whatToPost) {
       return [null, err.message];
     });
 }
+
+export function updateData(url, updateObj) {
+  return fetch(url, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(updateObj),
+  })
+    .then((resp) => resp.json())
+    .then((updateResult) => [updateResult, null])
+    .catch((err) => {
+      console.warn(err);
+      return [null, err.message];
+    });
+}
