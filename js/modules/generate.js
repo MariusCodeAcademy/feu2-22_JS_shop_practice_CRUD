@@ -37,6 +37,10 @@ export function makeOneItem(shopItemObj) {
       )}</span>$${priceAfterDiscount.toFixed(2)}</p>
     </div>
   `;
+  const buttonEl = document.createElement('button');
+  buttonEl.addEventListener('click', () => deleteItem(shopItemObj.id));
+  buttonEl.textContent = 'delete Item X';
+  liEl.append(buttonEl);
   return liEl;
 }
 
@@ -80,4 +84,8 @@ export function render(arr) {
 
 function makeBuyNow() {
   console.log('makeBuyNow');
+}
+
+function deleteItem(id) {
+  console.log('deleteItem', id);
 }

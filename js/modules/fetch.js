@@ -40,3 +40,5 @@ export function updateData(url, updateObj) {
       return [null, err.message];
     });
 }
+
+// deleteData funkcija
