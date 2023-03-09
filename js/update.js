@@ -1,5 +1,6 @@
 import { getParam } from './modules/helper.js';
 import { prodUrl, getData } from './modules/fetch.js';
+import { inputsToObject } from './modules/form.js';
 
 const formEl = document.forms[0];
 
@@ -19,23 +20,26 @@ const app = async () => {
   fillFromValues(itemFromApi);
 };
 app();
-
+const fields = ['title', 'description', 'price', 'discountPercentage', 'category', 'thumbnail'];
 function fillFromValues(objFromApi) {
   // uzpildyti title intpu reiksme ?
   // formEl.elements.title.value = objFromApi.title;
   // formEl.elements.price.value = objFromApi.price;
   // formEl.elements.description.value = objFromApi.description;
 
-  const fields = ['title', 'description', 'price', 'discountPercentage', 'category', 'thumbnail'];
   fields.forEach((field) => {
     formEl.elements[field].value = objFromApi[field];
   });
   console.log('tapsnojam sau per peti');
 }
 
-function updateItemHandler() {
+function updateItemHandler(e) {
   // sustabdyti perkrovima
+  e.preventDefault();
+
   // paimti reiksmes
+  const updatedItemObj = inputsToObject(formEl, fields);
   // iskonsolinti reikmes
+  console.log('updatedItemObj ===', updatedItemObj);
   // siusti putRequest
 }
