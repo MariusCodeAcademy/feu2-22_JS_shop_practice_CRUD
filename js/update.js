@@ -3,6 +3,9 @@ import { prodUrl, getData } from './modules/fetch.js';
 
 const formEl = document.forms[0];
 
+// event listenerrs
+formEl.addEventListener('submit', updateItemHandler);
+
 const app = async () => {
   // 1. gauti id is query params
   const updateItemId = getParam('updateId');
@@ -28,4 +31,11 @@ function fillFromValues(objFromApi) {
     formEl.elements[field].value = objFromApi[field];
   });
   console.log('tapsnojam sau per peti');
+}
+
+function updateItemHandler() {
+  // sustabdyti perkrovima
+  // paimti reiksmes
+  // iskonsolinti reikmes
+  // siusti putRequest
 }
